@@ -93,9 +93,6 @@ for (let i = 0; i < dayRows.length; i++) {
     let textArea = $('<textarea>');
     textArea.text(rowText);
 
-    // Give each text area element its own id
-    // textArea.attr("id", i);
-
     //append textArea to the current row
     currentRow.append(textArea);
 
