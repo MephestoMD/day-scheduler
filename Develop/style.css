@@ -12,6 +12,10 @@ body {
   border-bottom: 10px solid black;
 }
 
+.container {
+  margin-bottom: 10px;
+}
+
 textarea{
   background: transparent;
   border: none;
@@ -37,6 +41,10 @@ textarea{
   border-top: 1px solid white;;
 }
 
+#last-row {
+  padding-bottom: 20px;
+}
+
 .hour {
   background-color: #ffffff;
   color: #000000;
@@ -45,6 +53,7 @@ textarea{
   text-align: right;
   padding-top: 15px;
   padding-right: 10px;
+  font-weight: bold;
 }
 
 .past {
