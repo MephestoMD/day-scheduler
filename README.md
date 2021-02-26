@@ -1,6 +1,6 @@
 # Interactive Work-Day Events Planner
 
-<a href="https://mephestomd.github.io/horiseon-access/">Day Scheduler</a>
+<a href="https://mephestomd.github.io/day-scheduler/">Day Scheduler</a>
 
 *A Work-Day planner with interactive text cells and a save feature*
 
