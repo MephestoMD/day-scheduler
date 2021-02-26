@@ -105,7 +105,14 @@ for (let i = 0; i < dayRows.length; i++) {
         textArea.attr("class", "present");
     }
 
-    let saveButton = $('<button>')
+    let saveButton = $('<button>');
+    saveButton.attr("class", "saveBtn");
+
+    let saveIcon = $('<i>');
+    saveIcon.attr("class", "fa fa-save");
+    saveButton.append(saveIcon);
+    
+    currentRow.append(saveButton);
 
     
 }
