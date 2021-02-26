@@ -67,11 +67,24 @@ let dayRows = [
 
 // For loop to create rows of planner
 for (let i = 0; i < dayRows.length; i++) {
+
+    // Set text content for the time and text of current rows
     let rowTime = dayRows[i].hour;
     let rowText = dayRows[i].text;
-    let timeBlock = $('<div>');
-    timeBlock.attr("class", "time-block");
-    $('.container').append(timeBlock);
+
+    // Create <div> element for each row and set its attributes and append it to the container to display it
+    let currentRow = $('<div>');
+    currentRow.attr("class", "row");
+    $('.container').append(currentRow);
+
+    // Create <span> element for the block containing the time, set its class and text and append it to display it
+    let timeBlock = $('<span>');
+    timeBlock.attr("class", "hour");
     timeBlock.text(rowTime);
-    console.log(timeBlock);
+    currentRow.append(timeBlock);
+
+    // Create <textarea> element to hold the event text content
+    let textArea = $('<textarea>');
+    
+    
 }
