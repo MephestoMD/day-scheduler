@@ -1,6 +1,10 @@
 // Create variable to hold formatted time and display it
-var dateToday = moment().format('dddd, MMMM Do');
+let dateToday = moment().format('dddd, MMMM Do');
 $("#currentDay").text(dateToday);
+
+// Create variable to hold the current hour in 24-hour format
+let currentTime = moment().format('H');
+console.log(currentTime);
 
 // Create function to save events to local storage
 function saveItem () {
@@ -10,55 +14,55 @@ function saveItem () {
 // Array to hold all timeslots as objects with properties
 let dayRows = [
     {
-        index: 0,
+        hourNum: 9,
         hour: "9:00am",
         text: "",
     },
     
     {
-        index: 1,
+        hourNum: 10,
         hour: "10:00am",
         text: "",
     },
 
     {
-        index: 2,
+        hourNum: 11,
         hour: "11:00am",
         text: "",
     },
 
     {
-        index: 3,
+        hourNum: 12,
         hour: "12:00pm",
         text: "",
     },
 
     {
-        index: 4,
+        hourNum: 13,
         hour: "1:00pm",
         text: "",
     },
 
     {
-        index: 5,
+        hourNum: 14,
         hour: "2:00pm",
         text: "",
     },
 
     {
-        index: 6,
+        hourNum: 15,
         hour: "3:00pm",
         text: "",
     },
 
     {
-        index: 7,
+        hourNum: 16,
         hour: "4:00pm",
         text: "",
     },
 
     {
-        index: 8,
+        hourNum: 17,
         hour: "5:00pm",
         text: "",
     }
@@ -88,6 +92,20 @@ for (let i = 0; i < dayRows.length; i++) {
     textArea.text(rowText);
     currentRow.append(textArea);
 
+    console.log(dayRows[i].hourNum);
+
+    // If statements to determine background color of <textarea> elements depending on time of day
+    if (currentTime > dayRows[i].hourNum) {
+        textArea.attr("class", "past");
+    }
+    else if (currentTime < dayRows[i].hourNum) {
+        textArea.attr("class", "future");
+    }
+    else {
+        textArea.attr("class", "present");
+    }
+
+    let saveButton = $('<button>')
 
     
 }
