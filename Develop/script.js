@@ -83,8 +83,11 @@ for (let i = 0; i < dayRows.length; i++) {
     timeBlock.text(rowTime);
     currentRow.append(timeBlock);
 
-    // Create <textarea> element to hold the event text content
+    // Create <textarea> element to hold the event text content and append it to display it
     let textArea = $('<textarea>');
-    
+    textArea.text(rowText);
+    currentRow.append(textArea);
+
+
     
 }
